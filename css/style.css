@@ -4,10 +4,11 @@
   margin: 0;
 }
 
-@media all and (min-width: 992px) {
+
 .container {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   
 }
 
@@ -67,4 +68,19 @@ div {
   justify-content: center;
   align-items: center;
 }
+
+
+@media (min-width: 992px) {
+  main,
+  aside {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  main,
+  aside
+}
+@media (max-width: 768px)  {
+  main,
+  aside
 }
