@@ -70,17 +70,28 @@ div {
 }
 
 
-@media (min-width: 992px) {
-  main,
-  aside {
-    width: 100%;
+@media screen and (min-width: 992px) {
+  .container {
+    flex-basis: 100%;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  main,
-  aside
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    flex-basis: 100%;
+
+  }
+  
 }
-@media (max-width: 768px)  {
-  main,
-  aside
+@media screen and (max-width: 768px)  {
+  .container {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  }
+  .main {
+    width: 100%;
+  }
+  
+  
 }
