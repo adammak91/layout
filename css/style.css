@@ -18,22 +18,22 @@ body {
   text-align: center;
 }
 
-.Header {
+.header {
   background-color: red;
   color: #fff;
   width: 100%;
   height: 40px;
-  order: 1;
+  
   
 }
 .aside-left {
   background-color: green;
-  order: 2;
+  
   
 }
 .aside-right {
   background-color: pink;
-  order: 4;
+ 
  
 }
 .main {
@@ -43,12 +43,12 @@ body {
   display: flex;
   justify-content: center;
  
-  order: 3;
+ 
 
 }
 .footer {
   background-color: blueviolet;
-  order: 5;
+ 
   width: 100%;
   height: 40px;
   order: 4;
@@ -62,7 +62,7 @@ aside {
 div {
   flex-basis: 50%;
 }
-.Header ,
+.header ,
 .footer {
   display: flex;
   justify-content: center;
@@ -76,22 +76,30 @@ div {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .container {
+  .aside-left {
+    order: 1;
     flex-basis: 100%;
-
-  }
-  
-}
-@media screen and (max-width: 768px)  {
-  .container {
-  flex-basis: 100%;
-  display: flex;
-  flex-direction: column;
-  
   }
   .main {
-    width: 100%;
+    flex-basis: 75%;
   }
+  .aside-right {
+    flex-basis: 25%;
+  }
+}
   
+
+@media screen and (max-width: 768px)  {
   
+ .aside-left {
+   flex-basis: 100%;
+   order: 2;
+ } 
+ .main {
+   flex-basis: 100%;
+ }
+ .aside-right {
+   flex-basis: 100%;
+   order: 3;
+ }
 }
